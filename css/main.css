@@ -143,6 +143,22 @@ button {  width: auto; overflow: visible; }
 .lavaLampWithImage li a { position: relative; display: block; float: left; height: 30px; font: bold 12px Georgia; text-decoration: none; color: #4e4d3a; outline: none; text-align: center; text-transform: uppercase; top: 7px; letter-spacing: 0; margin: auto 15px; overflow: hidden; z-index: 10; }
 .lavaLampWithImage li a:hover, .lavaLampWithImage li a:active, .lavaLampWithImage li a:visited { border: none; }
 
+/* Language-specific nav adjustments for longer translations */
+/* Greek: longest items — shift left, widen, shrink link margins + font */
+:lang(el) .lavaLampWithImage { margin-left: 65px; width: 680px; }
+:lang(el) .lavaLampWithImage li a { margin: auto 5px; font-size: 11px; }
+
+/* Hindi: fits but tight — slight shift left + tighter margins */
+:lang(hi) .lavaLampWithImage { margin-left: 150px; width: 590px; }
+:lang(hi) .lavaLampWithImage li a { margin: auto 10px; }
+
+/* Ukrainian: "Зробити замовлення" causes wrap — shift left, widen */
+:lang(uk) .lavaLampWithImage { margin-left: 80px; width: 660px; }
+:lang(uk) .lavaLampWithImage li a { margin: auto 10px; }
+
+/* Arabic (RTL): shift left to give more room */
+:lang(ar) .lavaLampWithImage { margin-left: 80px; width: 660px; }
+
 
 /*****************
 	SLIDESHOW
